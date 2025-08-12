@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>2D Physics Playground — CodePen Ready</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">⚛️Ball Particles</div>
+      <div class="controls">
+        <label>Gravity <input id="gravity" type="range" min="0" max="2000" value="800"></label>
+        <label>Restitution <input id="restitution" type="range" min="0" max="1" step="0.01" value="0.8"></label>
+        <button id="addBall">Add Ball</button>
+        <button id="clear">Clear</button>
+        <button id="pause">Pause</button>
+      </div>
+    </header>
+
+    <main class="stage">
+      <canvas id="c"></canvas>
+      <aside class="sidebar">
+        <h3>How to use</h3>
+        <ul>
+          <li>Click to spawn a ball.</li>
+          <li>Drag to move an existing ball.</li>
+          <li>Use controls to change gravity / bounciness.</li>
+        </ul>
+        <div class="stats">
+          <div>Balls: <span id="count">0</span></div>
+          <div>FPS: <span id="fps">0</span></div>
+        </div>
+      </aside>
+    </main>
+
+    <footer class="foot">Designed for CodePen — lightweight 2D physics with spatial-hash broadphase</footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
